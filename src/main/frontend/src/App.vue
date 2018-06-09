@@ -44,8 +44,18 @@
             },
             logout() {
                 this.authenticatedUsername = '';
+            },
+            register(user) {
+                this.$http.post('participants', user)
+                    .then(response => {
+                        // udało się
+                    })
+                    .catch(response => {
+                        // nie udało sie
+                    });
             }
         }
+
     };
 </script>
 
